@@ -45,7 +45,7 @@ Flags:
     (default: 000000000000000)
 --config-file CONFIG_FILE
     path to an optional config file which can be sourced to load the above settings
-    (default: /Users/user/.bambu-add-ip.cfg)
+    (default: $HOME/.bambu-add-ip.cfg)
 
 Example config file content:
 SLICER_IP=127.0.0.1
