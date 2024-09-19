@@ -11,7 +11,8 @@ The program emits the following help text when invoked with the `-h` or `--help`
 ```
 Usage: bambu-add-ip [-h|--help] [flags] [printer_ip]
 
-Sends the IP address of a BambuLab printer to port 2021/udp, where BambuStudio is listening
+Sends the IP address of your BambuLab printer to port 2021/udp,
+where BambuStudio is listening
 
 -h / --help   show this message
 -d / --debug  print additional debugging messages
@@ -44,7 +45,7 @@ Flags:
     (default: 000000000000000)
 --config-file CONFIG_FILE
     path to an optional config file which can be sourced to load the above settings
-    (default: ./config.env)
+    (default: /Users/user/.bambu-add-ip.cfg)
 
 Example config file content:
 SLICER_IP=127.0.0.1
