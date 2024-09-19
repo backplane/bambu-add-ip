@@ -7,7 +7,7 @@ set -eu
 SELF=$(basename "$0" '.sh')
 
 # set defaults (see usage below for more info)
-CONFIG_FILE="${CONFIG_FILE:-$(dirname "$0")/config.env}"
+CONFIG_FILE="${CONFIG_FILE:-${HOME}/.${SELF}.cfg}"
 SLICER_IP="${SLICER_IP:-127.0.0.1}"
 PRINTER_IP="${PRINTER_IP:-}"
 PRINTER_USN="${PRINTER_USN:-000000000000000}"
