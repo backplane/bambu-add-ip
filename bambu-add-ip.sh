@@ -6,6 +6,16 @@
 set -eu
 SELF=$(basename "$0" '.sh')
 
+if [ "$SELF" = "script" ]; then
+  if [ -L "$SELF" ]; then
+    # workaround/enhancement for platypus in dev/symlink mode
+    SCRIPT_PATH=$(readlink "$0")
+    SELF=$(basename "$SCRIPT_PATH" '.sh')
+  else
+    SELF="bambu-add-ip"
+  fi
+fi
+
 # set defaults (see usage below for more info)
 CONFIG_FILE="${CONFIG_FILE:-${HOME}/.${SELF}.cfg}"
 SLICER_IP="${SLICER_IP:-127.0.0.1}"
